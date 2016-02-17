@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<script src="script.js"></script>
+
+    <title>Minesweeper</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+</head>
+
+<body oncontextmenu="return false;">
+     
+ <div class="homedisplay" id="homedisplay">
+   
+     <h1 id="minesweeper">Minesweeper: How to play</h1>
+     <br>
+     <p>O jogo baseia-se num tabuleiro dividido em quadrículas, no qual está escondido um certo número de minas, distribuídas prévia e aleatoriamente. Os tabuleiros standard são os seguintes:
+    </p>
+    <p>
+        -Beginner: 9x9 com 10 minas
+    </p>
+    <p>
+        -Medium: 16x16 com 40 minas
+    </p>
+    <p>
+        -Hard: 16x30 com 99 minas
+    </p>
+    <p>
+        Ao destapar uma quadrícula sem mina ela deve mostrar o número de minas na sua vizinhança directa. Se não houver nenhuma, ela vai aparecer vazia, e serão destapadas todas as quadrículas circundantes que ainda estejam tapadas, repetindo para cada uma delas este procedimento.
+    </p>
+    <h2 id="minesweepers">As definições de jogo encontram-se no menu ao lado.</h2>
+    <div class="icones">
+        <img src="./img/qm.png" id="qm">
+        <img src="./img/info.png" id="info">
+        <img src="./img/tool.png" id="tool">
+
+    </div>
+ </div>   
+
+    <div class="line"></div>
+    <div class="hey">                          
+            <div class="toolbar">
+                  
+               <canvas id="mycanvas" class="mycanvas"></canvas>
+
+                <div class="mul_clock_progress" id="mul_clock_progress">   <img src="./img/clock.png" id="icon_clock"> </div>
+                
+                <div class="mymul_bomb_progress" id="mymul_bomb_progress">
+                    
+                    <div class="mybombspic">
+                        <img src="./img/blue.png" id="icon_bomb">
+                    </div>
+
+                    <div class="mybombsnumber">
+                       <p id="mybombs1"></p>   
+                    </div>
+                </div>
+
+                <div class="enemymul_bomb_progress" id="enemymul_bomb_progress">
+                    
+                    <div class="enemybombspic">
+                        <img src="./img/red.png" id="icon_bomb">
+                    </div>                 
+                    
+                    <div class="enemybombsnumber">
+                        <p id="enemybombs1"></p>
+                    </div>   
+                </div>
+
+                
+                <div class="mul_player_progress" id="mul_player_progress">   
+                    <div class="player1">    <img src="./img/myturn.png" id="icon_player">  </div>
+
+                    <div class="player2">    <img src="./img/enemyturn.png" id="icon_player">  </div>  
+                </div> 
+        
+                <div class="mul_honor_progress">    <img src="./img/honor.png" id="icon_score" onclick="tableofHonor()">  </div>                 
+            
+            <div class="mul_leave" id="mul_leave"><img src="./img/logout.png" onclick="leave()"></div>
+    </div>
+
+<div class="honor_mul" id="honor_mul">
+    <p>"If winning isn't everything, why do they keep score?!"</p>
+    <button class="btn1" id="button_rank" onclick="getout()">Sair</button>
+</div>
+
+<div class="experiencia" id="experiencia">
+    <p id="experiencia1"></p>
+</div>
+
+<div class="tab" id="tab">
+    <table id="tabela">
+    </table>
+</div>
+
+    <div id="wrapper" class="menulateral">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+        <div class="list-group-item" id="logo"> 
+        <img src="logo.png">
+        </div>
+        <div class="list-group-item" id="text1">
+        <h4>1 | REGISTA-TE ! </h4>
+        </div>
+        <div class="list-group-item" id="registo">
+        <form class="form-horizontal" action='' method="POST">
+              <fieldset>
+                <div id="legend">
+                
+                </div>
+                <div class="control-group">
+                  <!-- Username -->
+                  <label class="control-label"  for="username">Username</label>
+                  <div class="controls">
+                    <p id="welcome"></p>
+                   <input type="text" id="inputUserName" name="username" pattern="" class="input-xlarge">
+                    <!-- <input type="text" id="inputUserName" name="username" pattern="/^[a-zA-Z0-9]+$/"  class="input-xlarge">-->
+                  </div>
+                </div>
+                <br>
+                <div class="control-group">
+                  <label class="control-label" for="password">Password</label>
+                  <div class="controls">
+                    <input type="password" id="inputUserPassword" name="password" placeholder="" class="input-xlarge">
+                  </div>
+                </div>
+                <div class="control-group">
+                <br>
+                  <!-- Button -->
+                  <div class="controls">
+                    <button class="btn btn-primary" onclick="login()" id="sign">Login</button>
+
+
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+        </div>
+        <div class="list-group-item" id="text1">
+        <h4>2 | TIPO DE JOGO</h4>
+        </div>
+
+        <div class="list-group-item" id="mdj">
+        <label class="radio-inline"><input type="radio" name="optradio"  disabled="true" onclick="single_enable()" id="singlebtn">Singleplayer</label>
+        <label class="radio-inline"><input type="radio" name="optradio" disabled="true" onclick="group_display()" id="multiplayerbtn">Multiplayer</label>
+       <!-- <div id="group_mul" class="mul_info">
+            <input type="text" id="intID" name="password" placeholder="Escolhe o ID do teu jogo" >
+            <button class="botao_mul" onclick="id_enable()" id="group_mul1" >ID</button>
+        </div>
+        -->
+        </div>
+
+        <div class="list-group-item" id="text1">
+        <h4> 3 | DIFICULDADE</h4>
+        </div>
+        <div class="list-group-item" id="radiobutton">
+        <label class="radio-inline"><input type="radio" name="optradio" disabled="true" id="begbtn" onclick="init_mulbeg()">Beginner</label>
+        <label class="radio-inline"><input type="radio" name="optradio" disabled="true" id="medbtn" onclick="init_mulmed()">Medium</label>
+        <label class="radio-inline"><input type="radio" name="optradio" disabled="true" id="hardbtn" onclick="init_mulhard()">Hard</label>
+        </div>
+        <div class="list-group-item" id="text1">
+        <h4> 4 | JOGA ! </h4>
+        </div>
+        <div class="list-group-item" id="butt">
+        <button class="btn btn-primary" disabled="true" id="startgamebtn" onclick="join()">Jogar</button>
+        </div>
+
+        <p id="load_opponent"></p>
+
+        <div class="bubblingG" id="loadingx">
+            <span id="bubblingG_1">
+            </span>
+            <span id="bubblingG_2">
+            </span>
+            <span id="bubblingG_3">
+            </span>
+        </div>
+
+        <div class="list-group-item" id="end">
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
