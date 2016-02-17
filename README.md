@@ -1,7 +1,7 @@
 # Minesweeper
 
 
-O presente trabalho foi realizado pelos alunos Célio Rodrigues (up201303171) e Carlos Bernardes no âmbito da unidade curricular de Tecnologias Web. 
+O presente trabalho foi realizado pelos alunos Célio Rodrigues (up201303171) e Carlos Bernardes(up201303743) no âmbito da unidade curricular de Tecnologias Web. 
 
 A estrutura do jogo Minesweeper divide-se em 3 etapas que foram submetidas e avaliadas ao longo do semestre, sendo essas:
 
