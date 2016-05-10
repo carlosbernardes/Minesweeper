@@ -1,7 +1,7 @@
 
 -# Minesweeper
   
- ![alt tag](http://pasteboard.co/OEO1rTk.png) 
+ ![alt tag](https://cdn.pbrd.co/images/OEO1rTk.png) 
  -O presente trabalho foi realizado pelos alunos Célio Rodrigues (up201303171) e Carlos Bernardes(up201303743) no âmbito da unidade curricular de Tecnologias Web na Faculdade de Ciências da Universidade do Porto. 
   
  -A estrutura do jogo Minesweeper divide-se em 3 etapas que foram submetidas e avaliadas ao longo do semestre, sendo essas:
