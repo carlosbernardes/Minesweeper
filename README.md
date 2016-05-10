@@ -1,16 +1,20 @@
 
--# Minesweeper
-  
  ![alt tag](https://cdn.pbrd.co/images/OEO1rTk.png) 
- <br>
- -O presente trabalho foi realizado pelos alunos Célio Rodrigues (up201303171) e Carlos Bernardes(up201303743) no âmbito da unidade curricular de Tecnologias Web na Faculdade de Ciências da Universidade do Porto. 
+
+## About
+
+ O presente trabalho foi realizado pelos alunos CÃ©lio Rodrigues (up201303171) e Carlos Bernardes(up201303743) no Ã¢mbito da unidade curricular de Tecnologias Web na Faculdade de CiÃªncias da Universidade do Porto. 
   
- -A estrutura do jogo Minesweeper divide-se em 3 etapas que foram submetidas e avaliadas ao longo do semestre, sendo essas:
+ A estrutura do jogo Minesweeper divide-se em 3 etapas que foram submetidas e avaliadas ao longo do semestre, sendo essas:
   
- <b>-1ª etapa -></b> Jogo Minesweeper single player;
- <br>
- <br>
- <b>-2ª etapa -> </b>Implementação multiplayer com recurso a comunicações http entre o cliente e o servidor desenvolvido pelo docente, a correr na porta 8020 e com recurso a CORS.
- <br>
- <br>
- <b>-3ª etapa -></b> Implementação do servidor capaz de comunicar com o código que foi desenvolvido  na 2ª etapa, nomeadamente as funções register e ranking. Implementação em NodeJS.
+* **1Âª etapa :** Jogo Minesweeper single player;
+
+
+* **2Âª etapa :**ImplementaÃ§Ã£o multiplayer com recurso a comunicaÃ§Ãµes http entre o cliente e o servidor desenvolvido pelo docente, a correr na porta 8020 e com recurso a CORS.
+ 
+ 
+* **3Âª etapa :** ImplementaÃ§Ã£o do servidor capaz de comunicar com o cÃ³digo que foi desenvolvido  na 2Âª etapa, nomeadamente as funÃ§Ãµes register e ranking. ImplementaÃ§Ã£o em NodeJS.
+
+
+## Screenshots
+![alt tag](http://i.imgur.com/4YuBPwL.png)
