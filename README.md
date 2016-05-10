@@ -16,5 +16,25 @@
 * **3ª etapa :** Implementação do servidor capaz de comunicar com o código que foi desenvolvido  na 2ª etapa, nomeadamente as funções register e ranking. Implementação em NodeJS.
 
 
-## Screenshots
+## Screenshots 
+
+
+ **Multiplayer:** 
+ 
+ 
 ![alt tag](http://i.imgur.com/4YuBPwL.png)
+
+**Singleplayer:**
+
+
+![alt tag](http://i.imgur.com/lnyCyo6.png)
+
+**Losing the game:**
+
+
+![alt tag](http://i.imgur.com/3nfnefw.png)
+
+**Winning and rankings:**
+
+
+![alt tag](http://i.imgur.com/iYujK9T.png)
